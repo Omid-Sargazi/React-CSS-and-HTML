@@ -1,27 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuItems = document.querySelectorAll('.menu-item');
+document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll("#menu-secondary > .menu-item");
+    const nestedDisplay = document.getElementById("nested-display");
+    const nestedList = document.getElementById("nested-list");
+    const backButton = document.getElementById("back-button");
 
-    menuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Close other opened menus
-            menuItems.forEach(innerItem => {
-                if (innerItem !== item) {
-                    innerItem.classList.remove('clicked');
-                }
-            });
+    menuItems.forEach((item) => {
+        item.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default behavior
 
-            // Toggle the current item
-            item.classList.toggle('clicked');
+            // Find the nested sub-menu within the clicked item
+            const subMenu = item.querySelector(".sub-menu");
 
-            // Stop propagation to prevent the click from propagating to the parent element
-            e.stopPropagation();
+            if (subMenu) {
+                // Clear and populate the nested display with the sub-menu's content
+                nestedList.innerHTML = "";
+                const clonedMenu = subMenu.cloneNode(true);
+                nestedList.appendChild(clonedMenu);
+
+                // Show the nested display container
+                nestedDisplay.style.display = "block";
+            }
         });
     });
 
-    // Close the menu if the user clicks outside
-    document.addEventListener('click', () => {
-        menuItems.forEach(item => {
-            item.classList.remove('clicked');
-        });
+    // Back button to return to the main menu
+    backButton.addEventListener("click", () => {
+        nestedDisplay.style.display = "none"; // Hide the nested display
     });
 });

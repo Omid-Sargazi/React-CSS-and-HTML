@@ -1,52 +1,48 @@
-/* Basic styles for the menu */
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
+
+#nested-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.menu > li {
-    position: relative;
-}
-
-/* Hide sub-menu by default */
-.sub-menu {
-    display: none;
-    list-style: none;
-    padding-left: 20px;
-}
-
-/* Style for main menu items */
-.menu-item > a {
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    background-color: #f4f4f4;
+#back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* Style for the clicked list item, when it's moved to the top */
-.menu-item.clicked > .sub-menu {
-    display: block;
+#nested-list {
+    list-style: none;
+    padding: 0;
 }
 
-.menu-item.clicked > a {
-    background-color: #ddd;
+#nested-list li {
+    margin: 10px 0;
+    font-size: 18px;
 }
 
-/* Submenu styling */
-.sub-menu li {
-    background-color: #e0e0e0;
-    padding: 5px 10px;
+#nested-list a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s;
 }
 
-/* Optional: Add a background to the page to show where the menu items are */
-.menu-item > a {
-    background-color: #f4f4f4;
-    transition: background-color 0.3s ease;
+#nested-list a:hover {
+    color: #0056b3;
 }
 
-.menu-item:hover > a {
-    background-color: #ddd;
+.menu-item .sun-menu{
+    list-style-type: none;
 }

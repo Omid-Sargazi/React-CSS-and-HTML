@@ -7,26 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <ul id="menu-secondary" class="menu">
-        <li id="menu-item-90982" class="category-item menu-item">
-            <a href="http://motor.local/product-category/%d8%a8%d8%af%d9%88%d9%86-%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c/">بدون دسته‌بندی</a>
-        </li>
-        <li id="menu-item-90983" class="category-item menu-item">
-            <a href="http://motor.local/product-category/motorola-bestsellers/">پرفروش های موتورولا</a>
-        </li>
-        <li id="menu-item-90985" class="category-item menu-item menu-item-has-children">
-            <a href="http://motor.local/product-category/amazing/">شگفت انگیز</a>
-            <ul class="sub-menu">
-                <li><a href="http://motor.local/product-category/series-parts-motorola-x/">قطعات سری موتورولا ایکس</a></li>
-                <li><a href="http://motor.local/product-category/series-parts-motorola-g/">قطعات سری موتورولا جی</a></li>
-                <li><a href="http://motor.local/product-category/series-parts-motorola-driod/">قطعات سری موتورولا دروید</a></li>
-            </ul>
-        </li>
-        <li id="menu-item-90989" class="category-item menu-item">
-            <a href="http://motor.local/product-category/series-parts-motorola-z/">قطعات سری موتورولا زد</a>
-        </li>
-    </ul>
-    
-   <script src=""></script>
+    <!-- Main container to display nested items -->
+<div id="nested-display" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: white; overflow-y: auto; padding: 20px;">
+    <button id="back-button" style="margin-bottom: 20px;">Back</button>
+    <ul id="nested-list"></ul>
+</div>
+
+<!-- Main menu -->
+<ul id="menu-secondary" class="menu">
+    <li class="menu-item">
+        <a href="#">Apple Accessories</a>
+        <ul class="sub-menu">
+            <li><a href="#">iPhone 16</a></li>
+            <li><a href="#">iPhone 16 Pro</a></li>
+            <li><a href="#">iPhone 16 Max</a></li>
+        </ul>
+    </li>
+    <li class="menu-item">
+        <a href="#">Samsung Accessories</a>
+        <ul class="sub-menu">
+            <li><a href="#">Galaxy S23</a></li>
+            <li><a href="#">Galaxy S23 Ultra</a></li>
+        </ul>
+    </li>
+    <li class="menu-item">
+        <a href="#">Xiaomi Accessories</a>
+        <ul class="sub-menu">
+            <li><a href="#">Redmi Note 12</a></li>
+            <li><a href="#">Mi 11 Ultra</a></li>
+        </ul>
+    </li>
+</ul>
+
+    <script src="script.js"></script>
 </body>
 </html>
