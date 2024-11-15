@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorola Category Menu</title>
+</head>
+<body>
+    <div class="motorola-category-menu">
+        <ul id="menu-secondary" class="menu">
+            <li id="menu-item-90982" class="category-item menu-item"><a href="http://motor.local/product-category/%d8%a8%d8%af%d9%88%d9%86-%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c/">بدون دسته‌بندی</a></li>
+            <li id="menu-item-90983" class="category-item menu-item"><a href="http://motor.local/product-category/motorola-bestsellers/">پرفروش های موتورولا</a></li>
+            <li id="menu-item-90984" class="category-item menu-item"><a href="http://motor.local/product-category/mobile-phones-motorola/">تلفن های همراه موتورولا</a></li>
+            <!-- More menu items go here -->
+        </ul>
+    </div>
+    
+    <!-- Dynamically Loading Scripts Example -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dynamically load the scripts, just like the original script does
+
+            function loadScript(src, callback) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.onload = callback;
+                script.onerror = function() {
+                    console.error('Error loading script: ' + src);
+                };
+                document.head.appendChild(script);
+            }
+
+            // Dynamically load the tracking scripts or any other necessary scripts
+            loadScript("https://www.example.com/your-script.js?campaign_code=869a299fda", function() {
+                console.log("Tracking script loaded successfully");
+                // Additional actions after script is loaded can be done here
+            });
+        });
+    </script>
+</body>
+</html>

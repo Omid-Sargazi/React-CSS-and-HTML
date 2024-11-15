@@ -1,0 +1,69 @@
+/* Basic style for the category items */
+.motorola-category-menu .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.motorola-category-menu .category-item {
+  position: relative; /* Ensure positioning for the sub-menu */
+}
+
+.motorola-category-menu .category-item > a {
+  display: block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for sub-menu to display at the top of the page when the main category is clicked */
+.motorola-category-menu .sub-menu {
+  display: none; /* Hide nested items by default */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: fixed; /* Position it fixed at the top of the page */
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
+  width: 100%;
+  z-index: 9999; /* Make sure it is on top of other content */
+}
+
+/* Show the sub-menu when the 'open' class is applied */
+.motorola-category-menu .category-item .sub-menu.open {
+  display: block; /* Show nested items when 'open' class is applied */
+}
+
+/* Dropdown for nested li elements */
+.motorola-category-menu .sub-menu .category-item > a:hover {
+  background-color: #ffcc00; /* Change background color of the parent when hovered */
+}
+
+.motorola-category-menu .sub-menu .category-item > a {
+  background-color: #f9f9f9; /* Background color for sub-category items */
+}
+
+/* For deeper nested menus (sub-sub-menu) */
+.motorola-category-menu .sub-sub-menu {
+  display: none; /* Hide nested sub-sub-menus by default */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position the sub-sub-menu to the right of the sub-menu */
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow */
+}
+
+/* Show nested sub-sub-menu when parent item is clicked */
+.motorola-category-menu .category-item.open > .sub-sub-menu {
+  display: block;
+}
+
+.motorola-category-menu .sub-menu .category-item:hover > a {
+  background-color: #ccc; /* Change color of sub-category item when hovered */
+}
